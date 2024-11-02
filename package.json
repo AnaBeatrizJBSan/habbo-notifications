@@ -1,0 +1,12 @@
+{
+  "name": "habbo-notifications",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AnaBeatrizJBSan/habbo-notifications.git",
+  "author": "Ana Beatriz <184788721+AnaBeatrizJBSan@users.noreply.github.com>",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
