@@ -1,8 +1,8 @@
 name: Check if users are online
 on:
   schedule:
-    - cron: "*/6 * * * 6,0"
-    - cron: "*/6 21-23 * * 1-5"
+    #- cron: "*/6 * * * 6,0" # every six minutes on weekends
+    - cron: "*/6 21-23 * * 1-5" # every six minutes on weekdays starting at 06:00pm and ending at 11:00pm
   #workflow_dispatch:
 permissions:
   contents: write
