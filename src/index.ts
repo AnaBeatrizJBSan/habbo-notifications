@@ -1,6 +1,8 @@
 import nodemailer from "nodemailer";
 import "dotenv/config";
 import Mail from "nodemailer/lib/mailer";
+import * as core from "@actions/core";
+
 import { getUserOnlineStatusByName } from "./services/users";
 
 const sendEmailWhenUserGetsOnline = () => {
@@ -34,10 +36,10 @@ const sendEmailWhenUserGetsOnline = () => {
 
         await transporter.sendMail(mailOptions(text));
       } else {
-        console.log(`${user} is not online yet`);
+        core.info(`${user} is not online yet`);
       }
     } catch (error) {
-      console.log(`error on sendEmailWhenUserGetsOnline fn${"\n"}${error}`);
+      core.setFailed(`error on sendEmailWhenUserGetsOnline fn${"\n"}${error}`);
     }
   });
 };
