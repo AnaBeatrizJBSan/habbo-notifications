@@ -7,7 +7,7 @@ import { getUserOnlineStatusByName } from "./services/users";
 
 const sendEmailWhenUserGetsOnline = () => {
   let onlineUsers: Array<string> = [];
-  let users = ["-Miaw", "Welcomido", "Wurx", "Mezajya"];
+  let users = process.env.USERS ? process.env.USERS.split(", ") : [];
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
