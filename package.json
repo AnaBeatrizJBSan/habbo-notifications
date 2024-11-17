@@ -7,6 +7,13 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
+    "@types/nodemailer": "^6.4.16",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.16"
   }
 }
