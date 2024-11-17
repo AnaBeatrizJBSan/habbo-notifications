@@ -29,14 +29,15 @@ const sendEmailWhenUserGetsOnline = () => {
       const isUserOnline = await getUserOnlineStatusByName(user);
 
       if (isUserOnline) {
-        const newOnlineUsers = onlineUsers.concat(user);
+        const newOnlineUsers = onlineUsers.concat([user]);
         const text = `Those users got online: ${newOnlineUsers.toString()}`;
+
         await transporter.sendMail(mailOptions(text));
       } else {
-        console.log(`${user} is not online :(`);
+        console.log(`${user} is not online yet`);
       }
     } catch (error) {
-      console.log({ error });
+      console.log(`error on sendEmailWhenUserGetsOnline fn${"\n"}${error}`);
     }
   });
 };

@@ -1,10 +1,9 @@
-interface SelectedBadges  {
+interface SelectedBadges {
   badgeIndex: number;
   code: string;
   name: string;
   description: string;
 }
-
 
 interface User {
   uniqueId: string;
@@ -19,7 +18,7 @@ interface User {
   currentLevelCompletePercent: number;
   totalExperience: number;
   starGemCount: number;
-  selectedBadges: Array<SelectedBadges>
+  selectedBadges: Array<SelectedBadges>;
 }
 
-export { User }
+export { User };
