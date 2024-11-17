@@ -16,6 +16,7 @@ jobs:
           touch .env
           echo EMAIL=${{ secrets.EMAIL }} >> .env
           echo EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }} >> .env
+          echo USERS=${{ secrets.USERS }} >> .env
       - uses: actions/setup-node@v4
         with:
           node-version: 20
