@@ -2,7 +2,7 @@ import axios from "axios";
 import * as core from "@actions/core";
 
 import { BASE_URL } from "../consts";
-import { User } from "./types";
+import { User, UserDetailed } from "./types";
 
 const getUserOnlineStatusByName = async (username: string) => {
   try {
@@ -13,4 +13,15 @@ const getUserOnlineStatusByName = async (username: string) => {
   }
 };
 
-export { getUserOnlineStatusByName };
+const getDetailedUserProfile = async (userID: string) => {
+  try {
+    const response = await axios.get<UserDetailed>(
+      `${BASE_URL}users/${userID}/profile/`,
+    );
+    return response.data;
+  } catch (error) {
+    core.setFailed(`error on getDetailedUserProfile fn:${"\n"}${error}`);
+  }
+};
+
+export { getUserOnlineStatusByName, getDetailedUserProfile };

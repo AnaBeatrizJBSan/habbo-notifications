@@ -7,7 +7,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "checkIfUserIsOnline": "npx tsx src/index.ts"
+    "checkIfUserIsOnline": "npx tsx src/sendEmailTasks/userGetsOnline.ts"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.16",
