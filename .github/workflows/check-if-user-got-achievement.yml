@@ -1,7 +1,7 @@
 name: Check if user got achievement
 on:
   schedule:
-    - cron: "0,30 11-23 29 12 0"
+    - cron: "0 11-23/2 29 12 0"
   #workflow_dispatch:
 permissions:
   contents: write
