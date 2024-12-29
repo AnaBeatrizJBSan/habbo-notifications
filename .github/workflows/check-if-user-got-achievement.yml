@@ -1,7 +1,7 @@
 name: Check if user got achievement
 on:
   schedule:
-    - cron: "0,30 11-23 29 12 0" # every 2 hours starting at 08:00am and ending at 11:00pm
+    - cron: "0,30 11-23 29 12 0"
   #workflow_dispatch:
 permissions:
   contents: write
@@ -22,5 +22,5 @@ jobs:
         with:
           node-version: 20
       - run: yarn install --frozen-lockfile
-      - name: Check if users are online
+      - name: Check if user got achievement
         run: yarn run checkIfUserGotAchievement
