@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "checkIfUserIsOnline": "npx tsx src/sendEmailTasks/userGetsOnline.ts",
-    "checkIfUserGotAchievement": "npx tsx src/sendEmailTasks/userGetsAchievement.ts",
+    "checkIfUserGotAchievement": "npx tsx src/sendEmailTasks/userGetsAchievement.ts"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.16",
