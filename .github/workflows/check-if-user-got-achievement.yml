@@ -23,4 +23,4 @@ jobs:
           node-version: 20
       - run: yarn install --frozen-lockfile
       - name: Check if users are online
-        run: yarn run checkIfUserHasAchievement
+        run: yarn run checkIfUserGotAchievement
