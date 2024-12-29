@@ -21,97 +21,78 @@ const usersWithoutAchievement = [
   },
   {
     userName: "CantoDoNavio",
-
     uniqueId: "hhbr-ec82cae117cd99ed69c0b4a64c042eaa",
   },
   {
     userName: "Abestado21",
-
     uniqueId: "hhbr-09deecc12dbd9625e7bd777b128ef12b",
   },
   {
     userName: "Abestado1Feliz",
-
     uniqueId: "hhbr-f7ade7ff4be05a9c4ca8912c3e2eac25",
   },
   {
     userName: "Abestado2Pixels",
-
     uniqueId: "hhbr-2888201fa7c2d2e138f9e40bb029a7e4",
   },
   {
     userName: "Abestado24",
-
     uniqueId: "hhbr-c702d25af110f53ac8cf68c15db50b8a",
   },
   {
     userName: "Abestado23",
-
     uniqueId: "hhbr-1c822fdd189edb4132cf7e8272a6318f",
   },
   {
     userName: "Abestado20",
-
     uniqueId: "hhbr-7a898a4b2c5c1456e6ae9f4877a4ef6d",
   },
   {
     userName: "Abestado13",
-
     uniqueId: "hhbr-675b164ff472144cd3837c922ac0f49e",
   },
   {
     userName: "Abestado14",
-
     uniqueId: "hhbr-3e5810e0a4a62167ee59f8d140dd3710",
   },
   {
     userName: "Abestado15pixel",
-
     uniqueId: "hhbr-b30468b19b9928ee4de5d06254fb93cf",
   },
   {
     userName: "Abestado11",
-
     uniqueId: "hhbr-16bc58475be902e07659785d1de822e7",
   },
   {
     userName: "Abestado22pixel",
-
     uniqueId: "hhbr-47e233c7c4548d85c26542533efa169a",
   },
   {
     userName: "Abestado8",
-
     uniqueId: "hhbr-4ae1538508564635552f34bb59ce91f7",
   },
   {
     userName: "Abestado7pixel",
-
     uniqueId: "hhbr-3148cd3f00e81812f9a20f36197d85ed",
   },
   {
     userName: "Abestado19",
-
     uniqueId: "hhbr-6f35ef599c1bd0ec81496a7b1e23798b",
   },
   {
     userName: "Abestado18pixel",
-
     uniqueId: "hhbr-f6baacc792b5029c9283627856db9670",
   },
   {
     userName: "abestado10pixel",
-
     uniqueId: "hhbr-f57b3a4cd3d44b87ff634fa1d7ce7a94",
   },
   {
     userName: "HotDogDoFelix",
-
     uniqueId: "hhbr-ce7455947b2b22a36f8128321f18992f",
   },
   {
     userName: "MCAnitaM",
-
     uniqueId: "hhbr-309264a8d5a01773bb99eaa6ab5255e6",
   },
   {
@@ -121,12 +102,10 @@ const usersWithoutAchievement = [
   },
   {
     userName: "Pingunca",
-
     uniqueId: "hhbr-2b2f310aea8e357c49bb5c52371d1b82",
   },
   {
     userName: "Abestada_13",
-
     uniqueId: "hhbr-d96f6a48c127183f85cf8338ec64cc22",
   },
   {
@@ -346,17 +325,14 @@ const usersWithoutAchievement = [
   },
   {
     userName: "CincoQuatro",
-
     uniqueId: "hhbr-ea0c4dc89aed829d9124cc79a7e193cf",
   },
   {
     userName: "!!oxe!!",
-
     uniqueId: "hhbr-5d06af708ecf23464702f22d296b7b90",
   },
   {
     userName: "SouEuPai!",
-
     uniqueId: "hhbr-8d9129e5669502cdd87b23c5f1d901b4",
   },
 ];
