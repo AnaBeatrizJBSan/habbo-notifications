@@ -24,4 +24,13 @@ const getDetailedUserProfile = async (userID: string) => {
   }
 };
 
-export { getUserOnlineStatusByName, getDetailedUserProfile };
+const getUserIdByName = async (username: string) => {
+  try {
+    const response = await axios.get<User>(`${BASE_URL}users?name=${username}`);
+    return response.data.uniqueId;
+  } catch (error) {
+    core.setFailed(`error on getUserIdByName fn:${"\n"}${error}`);
+  }
+};
+
+export { getUserOnlineStatusByName, getDetailedUserProfile, getUserIdByName };
