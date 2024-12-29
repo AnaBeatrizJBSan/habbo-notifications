@@ -1,7 +1,7 @@
 name: Check if users are online
 on:
   schedule:
-    - cron: "*/6 * * * 6,0"
+    - cron: "*/6 11-23 * * *" # every day every six minutes starting at 08:00am and ending at 11:00pm
   #workflow_dispatch:
 permissions:
   contents: write
@@ -16,6 +16,7 @@ jobs:
           touch .env
           echo EMAIL=${{ secrets.EMAIL }} >> .env
           echo EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }} >> .env
+          echo USERS=${{ secrets.USERS }} >> .env
       - uses: actions/setup-node@v4
         with:
           node-version: 20

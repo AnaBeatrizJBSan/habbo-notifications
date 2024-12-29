@@ -19,7 +19,7 @@ const sendEmailWhenUserGetsOnline = () => {
 
         await transporter.sendMail(mailOptions(text, subject));
       } else {
-        core.info(`${user} is not online yet`);
+        core.warning(`${user} is not online yet`);
       }
     } catch (error) {
       core.setFailed(`error on sendEmailWhenUserGetsOnline fn${"\n"}${error}`);
