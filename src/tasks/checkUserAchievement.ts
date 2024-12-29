@@ -12,7 +12,10 @@ const checkUserAchievement = async (userID: string) => {
     );
 
     if (!userHasTradingPassAchievement) {
-      const fileContent = `'${userDetailedProfile.user.name}',\n`;
+      const fileContent = `{
+        userName: '${userDetailedProfile.user.name}',\n
+        uniqueId: '${userDetailedProfile.user.uniqueId}',\n
+      },\n`;
 
       fs.appendFile(
         "src/tasks/usersWithoutAchievement.ts",
@@ -34,5 +37,5 @@ const checkUserAchievement = async (userID: string) => {
 userIds.forEach((userId, index) => {
   setTimeout(async () => {
     await checkUserAchievement(userId);
-  }, index * 10000);
+  }, index * 5000);
 });
