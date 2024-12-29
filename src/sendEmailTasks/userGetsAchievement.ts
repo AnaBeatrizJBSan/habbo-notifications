@@ -21,7 +21,7 @@ const sendEmailWhenUserGetsAchievement = async () => {
 
       await transporter.sendMail(mailOptions(text, subject));
     } else {
-      core.info(
+      core.warning(
         `user ${userDetailedProfile.user.name} did not got ${ACHIEVEMENT_CODE} achievement yet`,
       );
     }
