@@ -139,3 +139,4 @@ dist
 # users infos
 /src/tasks/userIds.ts
 /src/tasks/usersWithoutAchievement.ts
+/src/tasks/userNames.ts
