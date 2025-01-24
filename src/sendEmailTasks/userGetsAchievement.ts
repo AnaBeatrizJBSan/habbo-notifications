@@ -16,7 +16,7 @@ const sendEmailWhenUserGetsAchievement = async () => {
     );
 
     if (userHasAchievement) {
-      const text = `User '${userDetailedProfile.user.name}' got '${userHasTradingPassAchievement.name}' achievement!`;
+      const text = `User '${userDetailedProfile.user.name}' got '${userHasAchievement.name}' achievement!`;
       const subject = "User(s) got achievement!";
 
       await transporter.sendMail(mailOptions(text, subject));
