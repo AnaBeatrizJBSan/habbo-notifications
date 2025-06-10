@@ -19,6 +19,7 @@ jobs:
           echo EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }} >> .env
           echo USERS=${{ secrets.USERS }} >> .env
           echo USER_ID=${{ secrets.USER_ID }} >> .env
+          echo OFFLINE_USERS=${{ secrets.OFFLINE_USERS }} >> .env
       - uses: actions/setup-node@v4
         with:
           node-version: 20
