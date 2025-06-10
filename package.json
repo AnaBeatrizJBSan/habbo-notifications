@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "checkIfUserIsOnline": "npx tsx src/sendEmailTasks/userGetsOnline.ts",
+    "checkIfUserIsOffline": "npx tsx src/sendEmailTasks/userGetsOffline.ts",
     "checkIfUserGotAchievement": "npx tsx src/sendEmailTasks/userGetsAchievement.ts"
   },
   "devDependencies": {
