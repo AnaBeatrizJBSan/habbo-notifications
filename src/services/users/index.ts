@@ -4,9 +4,12 @@ import * as core from "@actions/core";
 import { BASE_URL } from "../consts";
 import { User, UserDetailed } from "./types";
 
-const getUserOnlineStatusByName = async (username: string) => {
+const getUserOnlineStatusByName = async (
+  username: string,
+  baseUrl = BASE_URL,
+) => {
   try {
-    const response = await axios.get<User>(`${BASE_URL}users?name=${username}`);
+    const response = await axios.get<User>(`${baseUrl}users?name=${username}`);
     return response.data.online;
   } catch (error) {
     core.setFailed(`error on getUserOnlineStatusByName fn:${"\n"}${error}`);
