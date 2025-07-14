@@ -3,14 +3,18 @@ import * as core from "@actions/core";
 
 import { getUserOnlineStatusByName } from "../services/users";
 import { mailOptions, transporter } from "../utils/mailTransporter";
+import { baseUrlMapping } from "../services/consts";
 
 const sendEmailWhenUserGetsOnline = () => {
   let onlineUsers: Array<string> = [];
-  let users = process.env.USERS ? process.env.USERS.split(", ") : [];
+  const users = process.env.USERS ? process.env.USERS.split(", ") : [];
+  const baseUrl = process.env.BASE_URL
+    ? baseUrlMapping[process.env.BASE_URL]
+    : undefined;
 
   users.forEach(async (user) => {
     try {
-      const isUserOnline = await getUserOnlineStatusByName(user);
+      const isUserOnline = await getUserOnlineStatusByName(user, baseUrl);
 
       if (isUserOnline) {
         const newOnlineUsers = onlineUsers.concat([user]);
