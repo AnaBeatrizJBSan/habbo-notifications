@@ -9,10 +9,13 @@ const sendEmailWhenUserGetsOffline = () => {
   let users = process.env.OFFLINE_USERS
     ? process.env.OFFLINE_USERS.split(", ")
     : [];
+  const baseUrl = process.env.BASE_URL
+    ? baseUrlMapping[process.env.BASE_URL]
+    : undefined;
 
   users.forEach(async (user) => {
     try {
-      const isUserOnline = await getUserOnlineStatusByName(user);
+      const isUserOnline = await getUserOnlineStatusByName(user, baseUrl);
 
       if (!isUserOnline) {
         const newOfflineUsers = offlineUsers.concat([user]);
