@@ -3,6 +3,7 @@ import * as core from "@actions/core";
 
 import { getUserOnlineStatusByName } from "../services/users";
 import { mailOptions, transporter } from "../utils/mailTransporter";
+import { baseUrlMapping } from "../services/consts";
 
 const sendEmailWhenUserGetsOffline = () => {
   let offlineUsers: Array<string> = [];
