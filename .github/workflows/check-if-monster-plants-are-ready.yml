@@ -1,0 +1,26 @@
+name: Check if Monster Plants are ready
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  resources:
+    name: Check if Monster Plants are ready
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create env file
+        run: |
+          touch .env
+          echo EMAIL=${{ secrets.EMAIL }} >> .env
+          echo EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }} >> .env
+          echo WIRED_READ_KEY=${{ secrets.WIRED_READ_KEY }} >> .env
+          echo WIRED_WRITE_KEY=${{ secrets.WIRED_WRITE_KEY }} >> .env
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: yarn install --frozen-lockfile
+      - name: Check if Monster Plants are ready
+        run: yarn run checkIfMonsterPlantsAreReady
