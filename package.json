@@ -9,7 +9,8 @@
   "scripts": {
     "checkIfUserIsOnline": "npx tsx src/sendEmailTasks/userGetsOnline.ts",
     "checkIfUserIsOffline": "npx tsx src/sendEmailTasks/userGetsOffline.ts",
-    "checkIfUserGotAchievement": "npx tsx src/sendEmailTasks/userGetsAchievement.ts"
+    "checkIfUserGotAchievement": "npx tsx src/sendEmailTasks/userGetsAchievement.ts",
+    "checkIfMonsterPlantsAreReady": "npx tsx src/sendEmailTasks/monsterPlantsAreReady.ts"
   },
   "devDependencies": {
     "@types/nodemailer": "^6.4.16",
@@ -24,6 +25,7 @@
     "@actions/core": "^1.11.1",
     "axios": "^1.12.0",
     "dotenv": "^16.4.5",
-    "nodemailer": "^6.9.16"
+    "nodemailer": "^6.9.16",
+    "wired-api-wrapper-node": "^1.0.4"
   }
 }
